@@ -1,0 +1,30 @@
+#server port
+server: 
+  port: 8787
+  
+#실시간 개발 반영
+devtools:
+  livereload:
+    enabled: true
+    
+#log Level
+logging:
+  level:
+    root: debug    
+
+#mysqlDB                         
+spring: 
+  datasource:
+    driverClassName: net.sf.log4jdbc.sql.jdbcapi.DriverSpy
+    url: jdbc:log4jdbc:mysql://localhost:3307/gravylab?characterEncoding=UTF-8&serverTimezone=UTC
+    hikari:
+      username: jyj
+      password: 1234
+      maximum-pool-size: 10
+      connection-test-query: SELECT 1
+      
+#mybatis-config.xml 위치 지정
+ #**은 하위 폴더 레벨에 상관없이 모든 경로를 뜻하며, *는 아무 이름이나 와도 된다는것을 뜻합니다.
+mybatis:
+  config-location: classpath:mybatis/config/mybatis-config.xml
+  mapper-locations: mybatis/mapper/**/*.xml  

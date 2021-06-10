@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="sample.jung.web.board.mapper.BoardMapper">
+ 	<select id="listBoard" resultType="BoardDTO">
+ 		SELECT * FROM TB_BOARD
+ 	</select>
+ 	
+ 	<insert id="insertBoard" parameterType="BoardDTO">
+        INSERT INTO 
+           tb_board(cate_cd, title, content, tag, view_cnt, reg_id, reg_dt, edit_dt)
+        VALUES(#{cateCd}, #{title}, #{content}, #{tag}, 0, 'testId', now(), now());
+    </insert>
+ 	
+</mapper>

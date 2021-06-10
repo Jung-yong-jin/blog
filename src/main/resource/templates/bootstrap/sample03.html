@@ -1,0 +1,61 @@
+<!doctype html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+    <!-- width=device-width부분은 장치의 화면 너비를 따르도록 페이지 너비를 설정합니다 -->
+    <!-- initial-scale=1부분은 브라우저에서 페이지를 처음로드 할 때 초기 확대 / 축소 수준을 설정합니다.-->
+	<title>Document</title>
+	<link th:href="@{/webjars/bootstrap/4.5.2/css/bootstrap.min.css}" rel="stylesheet" type="text/css"/>
+	
+</head>
+<body>
+	<div class="container">
+	   <h1>Three equal width columns</h1>
+	   <p>Note: try to add a new div with class="col" inside the row class - this will create three equal-width columns.</p>
+	   <div class="row">
+	   	<div class="col" style="background-color:lavender;">.col</div>
+	   	<div class="col" style="background-color:orange;">.col</div>
+	   	<div class="col" style="background-color:lavender;">.col</div>
+	   	<div class="col" style="background-color:orange;">.col</div>
+	   </div>
+	
+	
+		<div class="row mt-3">
+		  <div class="col" style="background-color:lavender;">.col</div>
+		  <div class="col" style="background-color:orange;">.col</div>
+		</div>
+		<!-- 3 개의 동일한 열 -->
+		<div class="row mt-3">
+		  <div class="col" style="background-color:lavender;">.col</div>
+		  <div class="col" style="background-color:orange;">.col</div>
+		  <div class="col" style="background-color:lavender;">.col</div>
+		</div>
+	
+	    <!-- 3 개의 동일한 반응형 열 -->
+	    <div class="row mt-3">
+          <div class="col-sm" style="background-color:lavender;">.col</div>
+          <div class="col-sm" style="background-color:orange;">.col</div>
+          <div class="col-sm" style="background-color:lavender;">.col</div>
+        </div>
+        
+        <!-- 5 개의 불균일 반응 열 -->
+        <div class="row mt-3">
+          <div class="col-sm-4" style="background-color:lavender;">.col</div>
+          <div class="col-sm" style="background-color:orange;">.col</div>
+          <div class="col-sm-4" style="background-color:lavender;">.col</div>
+          <div class="col-sm" style="background-color:orange;">.col</div>
+          <div class="col-sm-2" style="background-color:lavender;">.col</div>
+        </div>
+        
+        <!-- 두 개의 불균일 반응 열 -->
+        <div class="row mt-3">
+            <div class="col-sm-4" style="background-color:lavender;">.col</div>
+            <div class="col-sm-8" style="background-color:orange;">.col</div>
+        </div>
+	</div>
+	<script th:src="@{/webjars/jquery/3.5.1/jquery.min.js}"></script>
+    <script th:src="@{/webjars/popper.js/1.16.0/umd/popper.min.js}"></script>
+    <script th:src="@{/webjars/bootstrap/4.5.2/js/bootstrap.min.js}"></script>
+</body>
+</html>

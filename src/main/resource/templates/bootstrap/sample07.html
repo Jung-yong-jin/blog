@@ -1,0 +1,61 @@
+<!doctype html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+    <!-- width=device-width부분은 장치의 화면 너비를 따르도록 페이지 너비를 설정합니다 -->
+    <!-- initial-scale=1부분은 브라우저에서 페이지를 처음로드 할 때 초기 확대 / 축소 수준을 설정합니다.-->
+    <title>Document</title>
+	<link th:href="@{/webjars/bootstrap/4.5.2/css/bootstrap.min.css}" rel="stylesheet" type="text/css"/>
+</head>
+<body>
+	
+	<div class="container">
+	  <h2>Rounded Corners</h2>
+	  <p>The .rounded class adds rounded corners to an image:</p>            
+	  <!-- 둥근 모서리 -->
+	  <img th:src="@{/images/newyork.jpg}" class="rounded" alt="Cinque Terre" width="304" height="236"> 
+	</div>
+	
+	
+	<div class="container">
+		<h2>Circle</h2>
+		<p>The .rounded-circle class shapes the image to a circle:</p>
+		<!-- 원 -->
+		<img th:src="@{/images/newyork.jpg}" class="rounded-circle" alt="Cinque Terre" width="304" height="236">
+	</div>
+	
+	<div class="container">
+        <h2>Circle</h2>
+        <p>The .rounded-circle class shapes the image to a circle:</p>
+        <!-- 썸네일 -->
+        <img th:src="@{/images/newyork.jpg}" class="img-thumbnail" alt="Cinque Terre" width="304" height="236">
+    </div>
+
+    <div class="container">
+        <h2>Centered Image</h2>
+        <p>Center an image by adding the utility classes .mx-auto (margin:auto) and .d-block (display:block) to the image:</p> 
+        <!-- 이미지 중앙 정렬 -->
+        <img th:src="@{/images/newyork.jpg}" class="mx-auto d-block " alt="Cinque Terre" width="304" height="236">
+    </div>
+    
+    <div class="container clearfix">
+        <h2>Aligning images</h2>
+        <p>Use the float classes to float the image to the left or to the right:</p>
+        <!-- 이미지 양쪽 정렬 -->
+        <img th:src="@{/images/newyork.jpg}" class="rounded float-left" alt="Cinque Terre" width="304" height="236">
+        <img th:src="@{/images/newyork.jpg}" class="rounded float-right" alt="Cinque Terre" width="304" height="236">
+    </div>
+    
+    
+	<div class="container">
+	  <h2>Image</h2>
+	  <p>The .img-fluid class makes the image scale nicely to the parent element (resize the browser window to see the effect):</p>
+	  <!-- 반응 형 이미지 -->
+	  <img class="img-fluid" th:src="@{/images/newyork.jpg}" alt="Chania" width="304" height="236">
+	</div>
+    <script th:src="@{/webjars/jquery/3.5.1/jquery.min.js}"></script>
+    <script th:src="@{/webjars/popper.js/1.16.0/umd/popper.min.js}"></script>
+    <script th:src="@{/webjars/bootstrap/4.5.2/js/bootstrap.min.js}"></script>
+</body>
+</html>

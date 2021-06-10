@@ -1,0 +1,50 @@
+<!doctype html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+    <!-- width=device-width부분은 장치의 화면 너비를 따르도록 페이지 너비를 설정합니다 -->
+    <!-- initial-scale=1부분은 브라우저에서 페이지를 처음로드 할 때 초기 확대 / 축소 수준을 설정합니다.-->
+    <title>Document</title>
+	<link th:href="@{/webjars/bootstrap/4.5.2/css/bootstrap.min.css}" rel="stylesheet" type="text/css"/>
+</head>
+<body>
+    <div class="container">
+    	<h1>Example heading <span class="badge badge-secondary">new</span></h1>
+    	<h2>Example heading <span class="badge badge-secondary">new</span></h2>
+    	<h3>Example heading <span class="badge badge-secondary">new</span></h3>
+    	<h4>Example heading <span class="badge badge-secondary">new</span></h4>
+    	<h5>Example heading <span class="badge badge-secondary">new</span></h5>
+    	<h6>Example heading <span class="badge badge-secondary">new</span></h6>
+    	<hr />
+    	<!-- 문맥 배지 -->
+    	<span class="badge badge-primary">Primary</span>
+		<span class="badge badge-secondary">Secondary</span>
+		<span class="badge badge-success">Success</span>
+		<span class="badge badge-danger">Danger</span>
+		<span class="badge badge-warning">Warning</span>
+		<span class="badge badge-info">Info</span>
+		<span class="badge badge-light">Light</span>
+		<span class="badge badge-dark">Dark</span>
+		<hr>
+		<!-- 알약배지 -->
+		<span class="badge badge-pill badge-primary">Primary</span>
+		<span class="badge badge-pill badge-secondary">Secondary</span>
+		<span class="badge badge-pill badge-success">Success</span>
+		<span class="badge badge-pill badge-danger">Danger</span>
+		<span class="badge badge-pill badge-warning">Warning</span>
+		<span class="badge badge-pill badge-info">Info</span>
+		<span class="badge badge-pill badge-light">Light</span>
+		<span class="badge badge-pill badge-dark">Dark</span>
+		<hr />
+		<!-- 요소 내부의 배지 -->
+		<button type="button" class="btn btn-primary">
+		  Messages <span class="badge badge-light">4</span>
+		</button>
+    </div>
+   
+	<script th:src="@{/webjars/jquery/3.5.1/jquery.min.js}"></script>
+    <script th:src="@{/webjars/popper.js/1.16.0/umd/popper.min.js}"></script>
+    <script th:src="@{/webjars/bootstrap/4.5.2/js/bootstrap.min.js}"></script>
+</body>
+</html>

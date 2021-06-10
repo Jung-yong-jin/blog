@@ -1,0 +1,59 @@
+<!doctype html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+	<meta charset="UTF-8" />
+	<title>Document</title>
+	
+	<link th:href="@{/webjars/bootstrap/4.5.2/css/bootstrap.min.css}" rel="stylesheet" type="text/css"/>
+	
+</head>
+<body>
+	   <h1>타임리프 예제 테이블 foreach</h1>
+	   <table>
+	   	<thead>
+	   		<tr>
+	   			<th>번호</th>
+	   			<th>제목</th>
+	   			<th>작성자</th>
+	   			<th>날짜</th>
+	   		</tr>
+	   	</thead>
+	   	<tbody>
+	   		<!-- <tr th:object="${board}">
+	   			<td th:text="*{no}">1</td>
+	   			<td th:text="*{title}">테스트 제목 입니다.</td>
+	   			<td th:text="*{writer}">이종민</td>
+	   			<td th:text="${#temporals.format(board.updateTime, 'yyyy-MM-dd HH:mm:ss')}">2020.04.12</td>
+	   		</tr> -->
+   		    <tr th:each="board, iterstate: ${boardList}">
+   		       <td th:text="${board.no}"></td>
+   		       <td th:text="${board.title}"></td>
+   		       <td th:text="${board.writer}"></td>
+   		       <td th:text="${#temporals.format(board.updateTime, 'yyyy-MM-dd HH:mm:ss')}"></td>
+   		    </tr>
+	   	</tbody>
+	   </table>
+	   
+	   <h1>타임리프 예제 조건문</h1>
+       <table>
+        <thead>
+            <tr>
+                <th>번호</th>
+                <th>제목</th>
+                <th>작성자</th>
+                <th>날짜</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr th:each="board, iterState : ${boardList}">
+               <div th:if="${iterState.count} % 2 != 0 ">
+                   <td th:text="${board.no}"></td>
+                   <td th:text="${board.title}"></td>
+                   <td th:text="${board.writer}"></td>
+                   <td th:text="${#temporals.format(board.updateTime, 'yyyy-MM-dd HH:mm:ss')}"></td>
+               </div>
+            </tr>
+        </tbody>
+       </table>
+</body>
+</html>

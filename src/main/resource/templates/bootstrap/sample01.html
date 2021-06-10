@@ -1,0 +1,35 @@
+<!doctype html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+	<!-- width=device-width부분은 장치의 화면 너비를 따르도록 페이지 너비를 설정합니다 -->
+	<!-- initial-scale=1부분은 브라우저에서 페이지를 처음로드 할 때 초기 확대 / 축소 수준을 설정합니다.-->
+	<title>Document</title>
+	<link th:href="@{/webjars/bootstrap/4.5.2/css/bootstrap.min.css}" rel="stylesheet" type="text/css"/>
+	<link th:href="@{/css/bootstrap.css}" rel="stylesheet" type="text/css"/>
+</head>
+<body>
+	<!--  
+	   .container 클래스는 반응 형 고정 너비 컨테이너  
+	   .container-fluid클래스는 전체 너비 컨테이너를 제공합니다.
+	-->
+	<div class="container">
+	   <h1>My first Bootstrap Page</h1>
+	   <p>This is some text.</p>
+	</div>
+    <div class="container-fluid">
+        <h1>My first Bootstrap Page</h1>
+        <p>This is some text.</p>
+    </div>
+    
+    	
+	<script th:src="@{/webjars/jquery/3.5.1/jquery.min.js}"></script>
+    <script th:src="@{/webjars/popper.js/1.16.0/umd/popper.min.js}"></script>
+    <script th:src="@{/webjars/bootstrap/4.5.2/js/bootstrap.min.js}"></script>
+    <script type="text/javascript">
+       $(document).ready(function(){
+       });
+    </script>
+</body>
+</html>
